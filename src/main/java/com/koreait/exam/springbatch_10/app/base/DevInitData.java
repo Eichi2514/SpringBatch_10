@@ -28,12 +28,20 @@ public class DevInitData {
             Member member3 = memberService.join("user3", password, "user3@test.com");
             Member member4 = memberService.join("user4", password, "user4@test.com");
 
-            Product product1 = productService.create("반팔 1", 55000, "DDM-1",
+            memberService.addCash(member1,10_000,"충전_무통장입금");
+            memberService.addCash(member1,20_000,"충전_무통장입금");
+            memberService.addCash(member1,-5_000,"출금_일반");
+
+            long restCash = memberService.getRestCash(member1);
+            System.out.println("member1 rest cash: " + restCash);
+
+
+            Product product1 = productService.create("반팔 1", 55000, 40000, "DDM-1",
                     Arrays.asList(new ProductOption("RED", "95"),
                             new ProductOption("RED", "100"),
                             new ProductOption("BLUE", "95"),
                             new ProductOption("BLUE", "100")));
-            Product product2 = productService.create("셔츠 1", 66000, "DDM-2",
+            Product product2 = productService.create("셔츠 1", 66000, 50000, "DDM-2",
                     Arrays.asList(new ProductOption("WHITE", "95"),
                             new ProductOption("WHITE", "100"),
                             new ProductOption("BLACK", "95"),

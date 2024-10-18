@@ -19,6 +19,7 @@ import static javax.persistence.CascadeType.ALL;
 public class Product extends BaseEntity {
     private String name;
     private int price;
+    private int wholesalePrice;
     private String makerShopName;
 
     @Builder.Default
