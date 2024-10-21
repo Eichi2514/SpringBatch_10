@@ -1,6 +1,6 @@
 package com.koreait.exam.springbatch_10.app.product.entity;
 
-import com.koreait.exam.springbatch_10.app.base.entity.BaseEntity;
+import com.koreait.exam.springbatch_10.app.entity.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,9 +22,9 @@ public class ProductOption extends BaseEntity {
     private String color;
     private String size;
 
-    private int price; // 권장 판매가
-    private int salePrice; // 실제 판매가
-    private int wholesalePrice; // 도매가
+    private int price; // 권장 판매가 30000
+    private int salePrice; // 실제 판매가 40000
+    private int wholesalePrice; // 도매가 < 30000
     private int payPrice; // 결제 금액
     private int refundPrice; // 환불 금액
     private int pgFee; // 결제대행사 수수료
@@ -42,6 +42,7 @@ public class ProductOption extends BaseEntity {
     private Product product;
 
     public ProductOption(String color, String size) {
+
         this.color = color;
         this.displayColor = color;
         this.size = size;

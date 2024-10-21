@@ -1,4 +1,4 @@
-package com.koreait.exam.springbatch_10.app.base.entity;
+package com.koreait.exam.springbatch_10.app.entity;
 
 import lombok.Builder;
 import lombok.Getter;
