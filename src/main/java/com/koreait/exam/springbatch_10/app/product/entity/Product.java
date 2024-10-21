@@ -1,6 +1,6 @@
 package com.koreait.exam.springbatch_10.app.product.entity;
 
-import com.koreait.exam.springbatch_10.app.entity.BaseEntity;
+import com.koreait.exam.springbatch_10.app.base.entity.BaseEntity;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -22,6 +22,8 @@ public class Product extends BaseEntity {
     private int price;
     private int wholesalePrice;
     private String makerShopName;
+
+    private boolean isSoldOut;
 
     @Builder.Default
     @OneToMany(mappedBy = "product", cascade = ALL, orphanRemoval = true)

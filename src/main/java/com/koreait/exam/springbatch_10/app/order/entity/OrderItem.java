@@ -1,6 +1,7 @@
 package com.koreait.exam.springbatch_10.app.order.entity;
 
-import com.koreait.exam.springbatch_10.app.entity.BaseEntity;
+import com.koreait.exam.springbatch_10.app.base.entity.BaseEntity;
+import com.koreait.exam.springbatch_10.app.product.entity.Product;
 import com.koreait.exam.springbatch_10.app.product.entity.ProductOption;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,7 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 
 import static javax.persistence.FetchType.LAZY;
